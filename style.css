@@ -1,0 +1,38 @@
+:root {
+  --viva: rgba(187, 38, 73, 1);
+  --vivaBack: rgba(187, 38, 73, 0.1);
+  --invertedViva: rgba(65, 203, 170, 1);
+  --inverBack: rgba(65, 203, 170, 0.1);
+  --greyViva: rgba(121, 121, 121, 1);
+  --greyVivaLight: rgba(121, 121, 121, 0.1);
+  --slate: rgba(86, 98, 112, 1);
+}
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--greyViva);
+}
+
+.btn {
+  color: var(--viva);
+  background: var(--inverBack);
+  --bs-btn-border-color: var(--viva);
+  --bs-btn-hover-bg: var(--viva);
+}
+.card {
+  border: none;
+
+  box-shadow: 0 0 3px var(--greyVivaLight);
+}
+.card-body {
+  background: var(--inverBack);
+}
+/* background color */
+body > div {
+  background-image: linear-gradient(
+    135deg,
+    var(--inverBack) 0%,
+    rgba(65, 203, 170, 0.2) 100%
+  );
+}
