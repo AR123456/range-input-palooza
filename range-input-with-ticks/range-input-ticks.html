@@ -10,20 +10,19 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="standard-range.css" />
+    <link rel="stylesheet" href="range-input-ticks.css" />
     <title>Standard Range Slider</title>
   </head>
   <body>
     <!-- jumbotron  -->
     <div class="p-5 mb-4 rounded-3">
-      <h1 class="display-5 fw-bold">Add some simple tick mark</h1>
+      <h1 class="display-5 fw-bold">Add some simple tick marks</h1>
 
-      <h1 class="display-5 fw-bold">just use datalist</h1>
+      <h1 class="display-5 fw-bold">just use datalist options!</h1>
       <div class="container-fluid py-5">
         <div class="range-container">
+          <label for="volume">Volume Adjustment</label>
           <form action="">
-            <p>Volume Adjustment</p>
-
             <input
               type="range"
               id="volume"
@@ -31,8 +30,15 @@
               min="0"
               max="1000"
               value="10"
+              list="volume-tickmarks"
             />
-            <!-- <label for="volume">10</label> -->
+            <datalist id="volume-tickmarks">
+              <option value="0"></option>
+              <option value="250"></option>
+              <option value="500"></option>
+              <option value="750"></option>
+              <option value="1000"></option>
+            </datalist>
           </form>
         </div>
         <!-- <button
@@ -46,6 +52,6 @@
               </button> -->
       </div>
     </div>
-    <script src="standard-range.js"></script>
+    <script src="range-input-ticks.js"></script>
   </body>
 </html>
