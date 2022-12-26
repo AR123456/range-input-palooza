@@ -10,36 +10,38 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="range-input-ticks.css" />
-    <title>Standard Range Slider With Tickmarks</title>
+    <link rel="stylesheet" href="range-input-or-text-input.css" />
+    <title>Tickmarks and labels</title>
   </head>
   <body>
     <!-- jumbotron  -->
     <div class="p-5 mb-4 rounded-3">
-      <h1 class="display-5 fw-bold">Add some simple tick marks</h1>
+      <h1 class="display-5 fw-bold">Use the range or </h1>
 
-      <h1 class="display-5 fw-bold">just use datalist options!</h1>
+      <h1 class="display-5 fw-bold">input text box </h1>
       <div class="container-fluid py-5">
         <div class="range-container">
-          <label for="volume">Volume Adjustment</label>
+          <label for="volume">Savings Plan</label>
           <form action="">
+            <label for="savingsRangeInput">Savings goal $ </label>
             <input
+              id="savingsRange"
               type="range"
-              id="volume"
-              name="volume"
               min="0"
-              max="1000"
-              value="10"
-              list="volume-tickmarks"
+              max="1000000"
+              list="tickmarks"
+              value="10000"
             />
-            <datalist id="volume-tickmarks">
-              <option value="0"></option>
-              <option value="250"></option>
-              <option value="500"></option>
-              <option value="750"></option>
-              <option value="1000"></option>
+            <datalist id="tickmarks">
+              <option value="0" label="0"></option>
+              <option value="250000" label="250000"></option>
+              <option value="500000" label="500000"></option>
+              <option value="750000" label="750000"></option>
+              <option value="1000000" label="1000000"></option>
             </datalist>
-          </form>
+            <div class="input-amount">
+              <input id="savingsRangeInput" name="price" value="10000" />
+            </div>
         </div>
         <!-- <button
                 class="btn"
@@ -52,6 +54,6 @@
               </button> -->
       </div>
     </div>
-    <script src="range-input-ticks.js"></script>
+    <script src="range-input-or-text-input.js"></script>
   </body>
 </html>
