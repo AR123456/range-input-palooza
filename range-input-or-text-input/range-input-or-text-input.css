@@ -49,3 +49,11 @@ body {
     rgba(65, 203, 170, 0.2) 100%
   );
 } */
+.input-label {
+  color: var(--viva);
+}
+.input-box {
+  margin: 10px;
+  border-radius: 5px;
+  width: 6em;
+}
