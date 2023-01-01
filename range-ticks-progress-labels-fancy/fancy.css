@@ -27,3 +27,13 @@ body {
   overflow: hidden;
   margin: 0;
 }
+.btn {
+  color: var(--viva);
+  background: var(--inverBack);
+  --bs-btn-border-color: var(--viva);
+  --bs-btn-hover-bg: var(--viva);
+  border-color: var(--viva);
+}
+.btn:hover {
+  background: var(--viva);
+}
