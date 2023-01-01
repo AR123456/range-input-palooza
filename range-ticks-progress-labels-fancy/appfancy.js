@@ -86,30 +86,15 @@ function getSliderPercent(slider) {
 }
 
 function setTicks(slider) {
-  // console.log(slider);
-  // get the data-tick-id from each input range input
   let container = document.getElementById(slider.dataset.tickId);
-  // console.log(container);
-  // get the data-tick-step value for each input range
   const spacing = parseFloat(slider.dataset.tickStep);
-  // console.log(spacing);
-  // get the min and max from the range input and do the math
   const sliderRange = slider.max - slider.min;
-  // console.log(sliderRange);
-  // starting from 0
-  const tickCount = sliderRange / spacing + 1; // +1 to account for 0
-  // console.log(tickCount);
+  const tickCount = sliderRange / spacing + 1;
   for (let i = 0; i < tickCount; i++) {
-    // create a spans with class tick-slider-tick
     let tick = document.createElement("span");
     tick.className = "tick-slider-tick";
-    // console.log(tick);
     container.appendChild(tick);
   }
 }
 
 window.onload = init;
-
-// ////////////////
-//TODO work on formatting to match example site, look at DYI jumbotron
-// TODO for the chart will need to know given plan if goal will be reached and compare that to what the actual plan (monthly savings) need to be to achieve it. In the given amount of time
