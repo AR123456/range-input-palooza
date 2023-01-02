@@ -9,7 +9,7 @@
   /* track to left of handle and handle  */
   --green: #2fa22f;
   /* track before color */
-  --black: black;
+  --black: rgba(187, 38, 73, 0.1);
   --blue: #34385a;
   --slider-handle-size: 14px;
   /* round handle  */
@@ -20,6 +20,13 @@
   --slider-track-height: 4px;
   /* track round ends a bit  */
   --slider-track-border-radius: 4px;
+  --viva: rgba(187, 38, 73, 1);
+  --vivaBack: rgba(187, 38, 73, 0.1);
+  --invertedViva: rgba(65, 203, 170, 1);
+  --inverBack: rgba(65, 203, 170, 0.1);
+  --greyViva: rgba(121, 121, 121, 1);
+  --greyVivaLight: rgba(121, 121, 121, 0.1);
+  --slate: rgba(86, 98, 112, 1);
 }
 option {
   display: flex;
@@ -57,7 +64,7 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: var(--slider-handle-margin-top);
   width: var(--slider-handle-size);
   height: var(--slider-handle-size);
-  background: var(--green);
+  background: var(--viva);
   /* border: 1px solid #000000; */
   border-radius: var(--slider-handle-border-radius);
   cursor: pointer;
@@ -82,7 +89,7 @@ input[type="range"]:active::-webkit-slider-runnable-track {
   background: none;
 }
 input[type="range"]::-moz-range-track {
-  background: var(--green);
+  background: var(--viva);
   border: 0.2px solid #010101;
 
   border-radius: var(--slider-track-border-radius);
@@ -94,7 +101,7 @@ input[type="range"]::-moz-range-thumb {
   -webkit-appearance: none;
   width: var(--slider-handle-size);
   height: var(--slider-handle-size);
-  background: var(--green);
+  background: var(--viva);
   border: none;
   border-radius: var(--slider-handle-border-radius);
   cursor: pointer;
@@ -126,7 +133,7 @@ input[type="range"]::-ms-fill-upper {
 input[type="range"]::-ms-thumb {
   width: 15px;
   height: 15px;
-  background: #2fa22f;
+  background: var(--viva);
   border: 1px solid #000000;
   border-radius: 50px;
   cursor: pointer;
@@ -170,7 +177,7 @@ input[type="range"]:focus::-ms-fill-upper {
   background-color: var(--black);
 }
 .tick-slider-progress {
-  background-color: var(--green);
+  background-color: var(--viva);
 }
 
 .tick-slider-tick-container {
