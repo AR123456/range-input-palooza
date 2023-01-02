@@ -37,3 +37,7 @@ body {
 .btn:hover {
   background: var(--viva);
 }
+input[type="number"] {
+  color: var(--viva);
+  width: 85px;
+}
