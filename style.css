@@ -12,6 +12,8 @@
 body {
   font-family: "Lato", sans-serif;
   color: var(--greyViva);
+
+  background: rgba(65, 203, 170, 0.2) 100%;
 }
 
 .btn {
@@ -35,4 +37,7 @@ body > div {
     var(--inverBack) 0%,
     rgba(65, 203, 170, 0.2) 100%
   );
+}
+.navbar {
+  background: rgba(65, 203, 170, 0.2) 100%;
 }
