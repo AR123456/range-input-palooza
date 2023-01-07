@@ -28,10 +28,11 @@ calculateButton.onclick = function () {
   // since the range and input box have been synced can just get the value from one of them, so using box
   // https://www.youtube.com/watch?v=iKo9pDKKHnc&t=25s 17:20 in
   goal = inputGoal.value;
-  console.log(goal);
+
   // setup();
   // calculate();
   // syncSavingsGoal();
+  calculateButton.innerHTML = `Value is: $${goal}`;
 };
 //
 

@@ -1,6 +1,6 @@
-##
+## The Stack - HTML CSS, JS Bootstrap 5
 
-## Since it is almost 2023 using the Pantone Textile Cotton color of the year Viva Magenta Color HEX #BB2649 / RGB (187, 38, 73)/rgba(187, 38, 73, 1)
+## Since it is 2023 using the Pantone Textile Cotton color of the year Viva Magenta Color HEX #BB2649 / RGB (187, 38, 73)/rgba(187, 38, 73, 1)
 
 ## Viva Magenta rgba(65, 203, 170, 0.1)
 
