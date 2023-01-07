@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+:root {
+  --viva: rgba(187, 38, 73, 1);
+  --vivaBack: rgba(187, 38, 73, 0.1);
+  --invertedViva: rgba(65, 203, 170, 1);
+  --inverBack: rgba(65, 203, 170, 0.1);
+  --greyViva: rgba(121, 121, 121, 1);
+  --greyVivaLight: rgba(121, 121, 121, 0.1);
+  --slate: rgba(86, 98, 112, 1);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    135deg,
+    var(--inverBack) 0%,
+    rgba(65, 203, 170, 0.2) 100%
+  );
+  font-family: "Lato", sans-serif;
+  color: var(--greyViva);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+h2 {
+  position: absolute;
+  top: 10px;
+}
+.range-container {
+  position: relative;
+}
+input[type="range"] {
+  width: 300px;
+  margin: 18px 0;
+  -webkit-appearance: none;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"] + label {
+  background-color: var(--inverBack);
+  position: absolute;
+  top: -25px;
+  left: 110px;
+  width: 80px;
+  padding: 5px 0;
+  text-align: center;
+  color: var(--viva);
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+/* for chrome and saffari  */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--viva);
+  border-radius: 4px;
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  background: var(--invertedViva);
+  border-radius: 50%;
+  border: 1px solid var(--viva);
+  margin-top: -7px;
+  cursor: pointer;
+}
+/* for firefox  */
+input[type="range"]::-moz-range-track {
+  background: var(--viva);
+  border-radius: 4px;
+  width: 100%;
+  height: 13px;
+  cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  background: var(--invertedViva);
+  border-radius: 50%;
+  border: 1px solid var(--viva);
+  margin-top: -7px;
+  cursor: pointer;
+}
+/* for IE  */
+input[type="range"]::-ms-track {
+  background: var(--viva);
+  border-radius: 4px;
+  width: 100%;
+  height: 13px;
+  cursor: pointer;
+}
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  background: var(--invertedViva);
+  border-radius: 50%;
+  border: 1px solid var(--viva);
+  margin-top: -7px;
+  cursor: pointer;
+}
