@@ -41,3 +41,6 @@ body > div {
   width: 3em;
   border: none;
 }
+br {
+  line-height: 0rem;
+}
