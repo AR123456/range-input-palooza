@@ -1,0 +1,76 @@
+:root {
+  /* 50% sets teh "wave to match the initial value of 50 */
+  --wave: 50%;
+  /*The top offset for the wave*/
+  --offset: 2vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #333;
+}
+input[type="range"] {
+  width: 33%;
+}
+.globe {
+  height: 20vh;
+  width: 20vh;
+  position: relative;
+  border-radius: 50%;
+  border: 4px double white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+label {
+  /* style to text numeric display */
+  z-index: 1;
+  font-family: system-ui;
+  font-size: 10vh;
+  color: #333;
+}
+/* using pseudo-element to insert content after the selected elemnet */
+.globe::after {
+  display: block;
+  width: 40vh;
+  height: 40vh;
+  content: "";
+  background-color: #a4eafd;
+  border-radius: 15vh;
+  position: absolute;
+  left: 50%;
+  /*top: determines  distance between the top edge of the positioned element and the top edge of its containing block.  */
+  /* calc():  CSS function takes  expression as  argument and returns  result.  being used to calculate a value for the top property */
+  top: calc(100% - var(--wave) + var(--offset));
+  /* why this works using this syntax 
+  Web dev  https://www.youtube.com/watch?v=416MT-VmJdI
+  Powell  https://www.youtube.com/watch?v=sEBTTw9nwt0
+  */
+  translate: -50% 0;
+
+  -webkit-animation: spin 5s infinite;
+  animation: spin 5s linear infinite;
+}
+@-webkit-keyframes spin {
+  100% {
+    /* The rotate CSS property allows you to specify rotation transforms individually and independently of the transform property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the transform property. */
+    rotate: 360deg;
+  }
+}
+
+@keyframes spin {
+  100% {
+    rotate: 360deg;
+  }
+}
