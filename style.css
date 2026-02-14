@@ -42,5 +42,6 @@ body > div {
   border: none;
 }
 br {
-  height: 40rem;
+  display: block;
+  margin: 1px 0;
 }
